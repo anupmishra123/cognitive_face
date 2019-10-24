@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      HTML Webcam Capture Demo
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="1-basics.js"></script>
+    <style>
+      #vid-show, #vid-canvas, #vid-take {
+        display: block;
+        margin-bottom: 20px;
+      }
+      html, body {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="vid-controls">
+      <video id="vid-show" autoplay></video>
+      <input id="vid-take" type="button" value="Take Photo"/>
+      <div id="vid-canvas"></div>
+    </div>
+  </body>
+</html>

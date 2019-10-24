@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+    
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Time','Sad', 'Happy'],
+          [ 1, 100, 200],
+          [ 2, 500, 600],
+          [ 3, 1000, 1200]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+
+        const interval = setInterval(function() {
+                myFunction()}, 5000);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+  </body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to add a new element to the array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+
+<script>
+
+var graph2d = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+var a = Math.random();
+var b =Math.random();
+var c =Math.random();
+var d =Math.random();
+var val = [a,b,c,d]
+  graph2d.push(val);
+  document.getElementById("demo").innerHTML = graph2d;
+}
+const interval = setInterval(function() {
+                drawChart()}, 5000);
+
+</script>
+
+</body>
+</html>  
